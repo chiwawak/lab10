@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 12px;
+    background:
+        radial-gradient(circle at 20% 15%, rgba(139, 108, 214, 0.35), transparent 45%),
+        radial-gradient(circle at 80% 85%, rgba(79, 195, 214, 0.18), transparent 45%),
+        #1a1440;
+    color: #ece6ff;
+    font-family: Georgia, "Times New Roman", serif;
+    background-image: url('molitva.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: min(420px, 100%);
+    padding: 32px 28px 28px;
+    background: linear-gradient(160deg, #2a2160, #1f1850);
+    border: 2px solid #d8b45a;
+    border-radius: 20px;
+    box-shadow:
+        0 0 0 6px rgba(216, 180, 90, 0.15),
+        0 18px 48px rgba(5, 3, 25, 0.7);
+}
+
+#user-name {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 0 0 14px rgba(167, 139, 250, 0.8);
+}
+
+#attempt-counter {
+    font-size: 18px;
+    font-style: italic;
+    color: #b9a8f0;
+}
+
+#generate-btn {
+    width: 100%;
+    max-width: 240px;
+    padding: 14px 0;
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #2a1d05;
+    background: linear-gradient(180deg, #f3d98b, #d8b45a);
+    border: 2px solid #a9822f;
+    border-radius: 12px;
+    box-shadow: 0 4px 0 #7d5e1f, 0 8px 18px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s, filter 0.2s;
+}
+
+#generate-btn:hover:not(:disabled) {
+    filter: brightness(1.08);
+}
+
+#generate-btn:active:not(:disabled) {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #7d5e1f, 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#generate-btn:focus-visible {
+    outline: 3px solid #4fc3d6;
+    outline-offset: 3px;
+}
+
+#generate-btn:disabled {
+    background: #4a4470;
+    border-color: #5d5788;
+    box-shadow: none;
+    color: #9a93c0 ;
+    cursor: not-allowed;
+}
+
+.slot-machine {
+    display: flex;
+    gap: 6px;
+    width: 100%;
+    padding: 8px;
+    background: linear-gradient(90deg, #8a8fa8, #cfd3e4, #8a8fa8);
+    border: 3px solid #d8b45a;
+    border-radius: 12px;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.5), 0 0 24px rgba(216, 180, 90, 0.25);
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.column img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    padding: 8px;
+    background: radial-gradient(circle at 50% 35%, #a9a3e8, #7b78c4 );
+    border: 2px solid #5b2a55;
+    border-radius: 6px;
+    box-shadow: inset 0 0 10px rgba(26, 20, 64, 0.5);
+}
+
+
+#result-message {
+    min-height: 34px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #f3d98b; 
+    text-shadow: 0 0 14px rgba(216, 180, 90, 0.7) /* золотое свечение */;
+}
